@@ -1,0 +1,10 @@
+{
+  "Teacher-list": [
+    {
+      "name": "John",
+      "email": "john@123.com",
+      "password": "123456",
+      "id": 1
+    }
+  ]
+}

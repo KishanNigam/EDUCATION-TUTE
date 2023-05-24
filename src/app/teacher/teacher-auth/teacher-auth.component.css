@@ -1,53 +1,65 @@
 .form-style-1 {
-    position: relative;
-    border: 2px solid #F0F4F7;
-    top: 50px;
+  position: relative;
+  border: 2px solid #f0f4f7;
+  top: 50px;
 }
 
-.form-style-1 h3
-{
-    text-align: left;
-    margin: 20px 20px 20px 48px;
+.form-style-1 h3 {
+  text-align: left;
+  margin: 20px 20px 20px 48px;
 }
 
 .tech-auth {
-    border: 1px solid #F0F4F7;
-    margin: 20px 50px 30px 50px;
-    width: 35rem;
-    background-color: #F0F4F7;
-   
+  border: 1px solid #f0f4f7;
+  margin: 20px 50px 30px 50px;
+  width: 35rem;
+  background-color: #f0f4f7;
 }
 
 .form-style-2 {
-    display: flex;
-    flex-direction: column;
-    margin: 0px 50px 30px 50px ;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 50px 30px 50px;
 }
 
 .form-style-2 input {
-    border: none;
-    height: 50px;
-    /* width: 100%; */
-    margin: 20px;
-    padding: 0px 0px 0px 15px;
+  border: none;
+  height: 50px;
+  /* width: 100%; */
+  margin: 20px;
+  padding: 0px 0px 0px 15px;
 }
 
 .form-style-2 button {
-    width: fit-content;
-    margin: 10px 0px 0px 20px;
-    border: none;
-    padding: 15px 40px;
-    background-color: #FFAA17;
-    font-weight: bold;
+  width: fit-content;
+  margin: 10px 0px 0px 20px;
+  border: none;
+  padding: 15px 40px;
+  background-color: #ffaa17;
+  font-weight: bold;
 }
 
 .form-style-2 button:hover {
-    width: fit-content;
-    margin: 10px 0px 0px 20px;
-    border: none;
-    padding: 15px 40px;
-    background-color: #000;
-    color: #F0F4F7;
-    text-decoration: solid;
+  width: fit-content;
+  margin: 10px 0px 0px 20px;
+  border: none;
+  padding: 15px 40px;
+  background-color: #000;
+  color: #f0f4f7;
+  text-decoration: solid;
 }
 
+.ClickLogin {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.ClickLogin:hover {
+  text-decoration: underline;
+}
+
+.error-through {
+  color: red;
+  text-align: center;
+}

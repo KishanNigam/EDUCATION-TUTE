@@ -7,6 +7,8 @@ import { DashboardComponent } from './teacher/dashboard/dashboard.component';
 import { CommonHeaderComponent } from './common-header/common-header.component';
 import { TeacherAuthComponent } from './teacher/teacher-auth/teacher-auth.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

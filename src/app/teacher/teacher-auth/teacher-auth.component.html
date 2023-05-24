@@ -1,18 +1,66 @@
 <div class="row">
-    <div class="col-lg-3"></div>
-    <!-- Form Start -->
-    <div class="col-lg-6 form-style-1">
-        <h3>Teacher Sign Up</h3>
-        <div class="tech-auth container">
-            <form class="form-style-2">
-                <input type="text" placeholder="Enter Your Name"/>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="password">
-                <button>SignUp</button>
-            </form>
-        </div>
-        <p><a href="#">Already have Account?</a></p>
+  <div class="col-lg-3"></div>
+  <!-- Form Start -->
+  <div class="col-lg-6 form-style-1">
+    <!-- Start SignUp Form -->
+    <div *ngIf="showTuteLogin">
+      <h3>Teacher Sign Up</h3>
+      <div class="tech-auth container">
+        <form
+          #tuteSignUp="ngForm"
+          (ngSubmit)="signUp(tuteSignUp.value)"
+          class="form-style-2"
+        >
+          <input
+            type="text"
+            ngModel
+            name="name"
+            placeholder="Enter Your Name"
+          />
+          <input type="email" ngModel name="email" placeholder="Email" />
+          <input
+            type="password"
+            ngModel
+            name="password"
+            placeholder="password"
+          />
+          <button>SignUp</button>
+        </form>
+        <a class="ClickLogin" (click)="openTuteLogin()">Already have Account? Click to Login</a>
+      </div>
     </div>
-    <!-- Form End -->
-    <div class="col-lg-3"></div>
+    <!-- End Sign up Form -->
+
+    <!-- Start Login Form -->
+    <div *ngIf="!showTuteLogin">
+      <h3>Teacher Log In</h3>
+      <div class="tech-auth container">
+        <h5 class="error-through">{{tuteAuthError}}</h5>
+        <form
+          #tuteSignIn="ngForm"
+          (ngSubmit)="signIn(tuteSignIn.value)"
+          class="form-style-2"
+        >
+          <input
+            type="text"
+            ngModel
+            name="name"
+            placeholder="Enter Your Name"
+          />
+          <input
+            type="password"
+            ngModel
+            name="password"
+            placeholder="password"
+          />
+          <button>LogIn</button>
+        </form>
+        <a class="ClickLogin" (click)="openTuteSignUp()">Create Account? Click to SignUp</a>
+      </div>
+    </div>
+
+    <!-- End Login Form -->
+  </div>
+  <!-- Form End -->
+  <div class="col-lg-3"></div>
 </div>
