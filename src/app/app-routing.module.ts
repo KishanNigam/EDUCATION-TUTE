@@ -16,7 +16,7 @@ const routes: Routes = [
     component: TeacherAuthComponent,
   },
   {
-    path: 'teacher/dashboard',
+    path: 'teacher-dashboard',
     component: DashboardComponent,
     canActivate: [TuteAuthguardGuard],
   },

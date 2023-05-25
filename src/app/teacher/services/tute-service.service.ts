@@ -19,13 +19,13 @@ export class TuteServiceService {
       .subscribe((result) => {
         this.isTuterLoggedIn.next(true);
         localStorage.setItem('tuter', JSON.stringify(result.body));
-        this.route.navigate(['teacher/dashboard']);
+        this.route.navigate(['teacher-dashboard']);
       });
   }
   reloadTuter() {
     if (localStorage.getItem('tuter')) {
       this.isTuterLoggedIn.next(true);
-      this.route.navigate(['teacher/dashboard']);
+      this.route.navigate(['teacher-dashboard']);
     }
   }
 
@@ -38,7 +38,7 @@ export class TuteServiceService {
       console.warn(result);
       if(result && result.body &&result.body.length){
         localStorage.setItem('tuter', JSON.stringify(result.body));
-        this.route.navigate(['teacher/dashboard']);
+        this.route.navigate(['teacher-dashboard']);
       }
        else {
         console.warn("login failed");
