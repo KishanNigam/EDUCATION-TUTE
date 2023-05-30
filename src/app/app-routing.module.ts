@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { TeacherAuthComponent } from './teacher/teacher-auth/teacher-auth.component';
 import { DashboardComponent } from './teacher/dashboard/dashboard.component';
 import { TuteAuthguardGuard } from './teacher/tute-authguard.guard';
+import { TeacherDashSidebarComponent } from './teacher/teacher-dash-sidebar/teacher-dash-sidebar.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
     path: 'teacher-dashboard',
     component: DashboardComponent,
     canActivate: [TuteAuthguardGuard],
-  },
+  }
 ];
 
 @NgModule({

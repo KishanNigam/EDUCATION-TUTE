@@ -14,7 +14,7 @@ export class CommonHeaderComponent implements OnInit {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('tuter') && val.url.includes('teacher')) {
-          console.warn('in tuter area');
+          
           this.menuType = 'teacher';
           if(localStorage.getItem('tuter')){
             let tuterStore=localStorage.getItem('tuter');
@@ -22,7 +22,7 @@ export class CommonHeaderComponent implements OnInit {
             this.tuterName=tuterData.name;
           }
         } else {
-          console.warn('outside');
+      
           this.menuType = 'default';
         }
       }

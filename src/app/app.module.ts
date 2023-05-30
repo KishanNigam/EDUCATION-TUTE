@@ -9,6 +9,7 @@ import { TeacherAuthComponent } from './teacher/teacher-auth/teacher-auth.compon
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TeacherDashSidebarComponent } from './teacher/teacher-dash-sidebar/teacher-dash-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     CommonHeaderComponent,
     TeacherAuthComponent,
-    HomeComponent
+    HomeComponent,
+    TeacherDashSidebarComponent
   ],
   imports: [
     BrowserModule,
