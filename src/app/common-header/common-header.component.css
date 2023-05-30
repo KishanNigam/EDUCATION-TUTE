@@ -1,48 +1,96 @@
 .nav {
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid #f4f3ef;
+    background-color: #f4f3ef;
+    margin-bottom: 0px;
+    padding: 10px;
+    height: 80px fit-content !important;
 }
 
-.nav h1{
-    color: blueviolet;
-    margin: 0;
-    font-size: 40px;
+.edu-dash-logo {
+    width: 6rem;
+    height: 3rem;
+    margin: 0px 0px 0px 40px;
 }
-.nav h1 a {
-    text-decoration: none;
-}
+
+
+
 .nav ul{
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px 50px 0px 0px;
+    padding: 0px 20px;
 }
 .nav li {
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 30px;
 }
-.nav li a {
+/* .nav li a {
     text-decoration: none;
     color: blueviolet;
     font-weight: bold;
-}
-.nav .nav-search {
-    margin-top: 5px;
+} */
+.tutur-nav-search {
+    margin-top: -10px;
     flex: 1;
     display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
 }
-.nav .nav-search input {
+
+.tutur-nav-search input {
     flex: 1;
-    color: blueviolet;
-    border: 1px solid blueviolet;
+    color: #000;
+    border: none;
     height: 35px;
-    border-right: 0px;
+    border-radius: 7px 0px 0px 7px;
+    background-color: #ffffff;
+    outline: none;
 }
-.nav .nav-search button {
-    color: blueviolet;
-    border: 1px solid blueviolet;
-    height: 39px;
-    border-left: 0px;
+.tutur-nav-search button {
+    color: #000;
+    border: none;
+    height: 35px;
+    margin-top: 0px;
+    border-radius: 0px 7px 7px 0px;
+    background-color: #ffffff;
 }
+
+.tuter-to-std-page {
+   margin-top: -5px;
+}
+
+.tuter-to-std-page a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    border: 1px solid #ffffff;
+    border-radius: 7px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+}
+.tuter-notification {
+    margin-top: -3px;
+}
+
+.tuter-profile-pic {
+    /* margin-top: -5px; */
+    margin: -5px;
+    cursor: pointer;
+}
+
+.tuter-profile-pic a img {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.tuter-profile-pic a {
+    color: #000;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+

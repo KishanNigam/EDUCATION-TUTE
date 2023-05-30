@@ -1,22 +1,81 @@
-<nav class="nav container">
-    <h1><a routerLink="">TUTE</a></h1>
-    <div *ngIf="menuType==='default'" class="nav-search"> 
-        <input type="text" placeholder="Search for product">
-        <button>Search</button>
+<!-- Tuter header -->
+<nav class="nav" *ngIf="menuType != 'default'">
+    <a routerLink=""
+      ><img
+        class="edu-dash-logo"
+        src="../../assets/logo.png"
+        alt="Education logo"
+    /></a>
+    <div *ngIf="menuType === 'default'" class="nav-search">
+      <input type="text" placeholder="Search for product" />
+      <button>Search</button>
     </div>
-<div [ngSwitch]="menuType">
-    <ul *ngSwitchCase="'default'">
-        <li><a routerLink="/teacher/auth">Teacher</a></li>
-        <li><a href="#">Seller</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Cart(0)</a></li>
-    </ul>
-    <ul *ngSwitchCase="'teacher'">
-        <li><a href="#">Teachers List</a></li>
-        <li><a href="#">Students List</a></li>
-        <li><button (click)="tuterLogOut()">LogOut</button></li>
-        <li><a href="#">Papers</a></li>
-        <li><a href="#">{{tuterName | titlecase}}</a></li>
-    </ul>
-</div>
-</nav>
+  
+    <div>
+      <ul>
+        <li>
+          <div class="tutur-nav-search">
+            <input type="text" placeholder="Search. . ." />
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+          </div>
+        </li>
+        <li class="tuter-to-std-page"><a routerLink="">Student Page</a></li>
+        <li class="tuter-notification">
+          <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+        </li>
+        <li class="tuter-profile-pic">
+          <a (click)="tuterLogOut()"
+            ><img  src="../../assets/profile.avif" alt="" />{{
+              tuterName | titlecase
+            }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Student header -->
+  <nav class="nav" *ngIf="menuType === 'default'">
+    <a routerLink=""
+      ><img
+        class="edu-dash-logo"
+        src="../../assets/logo.png"
+        alt="Education logo"
+    /></a>
+    <div class="tutur-nav-search">
+      <input type="text" placeholder="Search. . ." />
+      <button><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  
+    <div>
+      <ul>
+        <li class="tuter-profile-pic">
+          <a routerLink="/teacher/auth"><img src="../../assets/profile.avif" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- <nav class="nav container">
+      <h1><a routerLink="">TUTE</a></h1>
+      <div *ngIf="menuType==='default'" class="nav-search"> 
+          <input type="text" placeholder="Search for product">
+          <button>Search</button>
+      </div>
+  <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'">
+          <li><a routerLink="/teacher/auth">Teacher</a></li>
+          <li><a href="#">Seller</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Cart(0)</a></li>
+      </ul>
+      <ul *ngSwitchCase="'teacher'">
+          <li><a href="#">Teachers List</a></li>
+          <li><a href="#">Students List</a></li>
+          <li><button (click)="tuterLogOut()">LogOut</button></li>
+          <li><a href="#">Papers</a></li>
+          <li><a href="#">{{tuterName | titlecase}}</a></li>
+      </ul>
+  </div>
+  </nav> -->
+  
