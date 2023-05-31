@@ -1,9 +1,36 @@
+.side-prof {
+    width: 30px;
+    height: 30px;
+}
+.tuter-sidebar ul li a {
+    margin-top: 10px;
+}
+.tut-drop-sec ul li a {
+    text-align: right;
+}
+
+.tuter-sidebar ul li a:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tut-drop-sec ul li a:hover {
+    background-color: #ffaa17;
+    color: #ffffff;
+    font-weight: bold;
+}
 .tuter-sidebar {
     width: 280px;
-    height: 36.6rem !important;
+    height: 100% !important;
+    margin-top: 70px;
 }
 
 .nav-item a {
     text-decoration: none;
 
+}
+
+.tut-dash-blw-prof-btn {
+    cursor: pointer;
 }

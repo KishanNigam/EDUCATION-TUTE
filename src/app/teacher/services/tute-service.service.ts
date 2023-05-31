@@ -31,17 +31,14 @@ export class TuteServiceService {
 
   // LogIn Function
   tuterSignIn(data: tuterlogIn) {
-    console.warn(data);
     this.http.get(
       `http://localhost:3000/Teacher-list?name=${data.name}&password=${data.password}`,
     {observe:'response'}).subscribe((result:any)=>{
-      console.warn(result);
       if(result && result.body &&result.body.length){
         localStorage.setItem('tuter', JSON.stringify(result.body));
         this.route.navigate(['teacher-dashboard']);
       }
        else {
-        console.warn("login failed");
         this.isLoginError.emit(true)
        } 
     });

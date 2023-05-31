@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-teacher-dash-sidebar',
   templateUrl: './teacher-dash-sidebar.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeacherDashSidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
 
+  tuterLogOut() {
+    localStorage.removeItem('tuter');
+    this.route.navigate(['/']);
+  }
 }

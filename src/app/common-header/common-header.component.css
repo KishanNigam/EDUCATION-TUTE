@@ -6,6 +6,8 @@
     margin-bottom: 0px;
     padding: 10px;
     height: 80px fit-content !important;
+    position: fixed;
+    width: 100%;
 }
 
 .edu-dash-logo {
